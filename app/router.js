@@ -7,7 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('overwatch');
+  this.route('overwatch', function() {
+    this.route('competetive', function() {
+      this.route('input');
+      this.route('output');
+    });
+  });
 });
 
 export default Router;
