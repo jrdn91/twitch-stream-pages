@@ -1,1 +1,18 @@
-{{outlet}}
+<form>
+  <div class="form-group">
+    <label for="starting-sr">Starting SR</label>
+    {{input type="text" class="form-control" id="starting-sr" value=model.startingSR}}
+  </div>
+  <div class="form-group">
+    <label for="current-sr">Current SR</label>
+    {{input type="text" class="form-control" id="current-sr" value=model.currentSR}}
+  </div>
+  <div class="form-group">
+    <label for="games-won">Games Won</label>
+    {{input type="text" class="form-control" id="games-won" value=model.gamesWon}}
+  </div>
+  <div class="form-group">
+    <label for="games-lost">Games Lost</label>
+    {{input type="text" class="form-control" id="games-lost" value=model.gamesLost}}
+  </div>
+</form>
