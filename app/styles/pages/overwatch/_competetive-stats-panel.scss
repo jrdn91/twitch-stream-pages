@@ -1,0 +1,31 @@
+.competetive-stats-panel {
+  position: relative;
+  .content {
+    text-align: right;
+    position: absolute;
+    top: 9px;
+    width: 284px;
+    bottom: 10px;
+    .heading {
+      font-family: "BigNoodle";
+      font-style: italic;
+      padding: 0 45px 0 14px;
+      margin: 0;
+      height: 45px;
+      line-height: 45px;
+      &:first-of-type {
+        margin-top: 23px;
+      }
+    }
+    .text {
+      margin: 0;
+      margin-top: 18px;
+      font-family: "BigNoodle";
+      font-size: 30px;
+      padding: 0 45px 0 14px;
+      height: 38px;
+      line-height: 38px;
+      margin-bottom: 15px;
+    }
+  }
+}
