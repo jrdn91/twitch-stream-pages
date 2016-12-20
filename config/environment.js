@@ -27,7 +27,8 @@ module.exports = function(environment) {
       authDomain: 'stream-pages.firebaseapp.com',
       databaseURL: 'https://stream-pages.firebaseio.com',
       storageBucket: 'stream-pages.appspot.com',
-    }
+    },
+    fireBaseAppName: 'stream-pages'
   };
 
   if (environment === 'development') {
