@@ -29,3 +29,27 @@
     }
   }
 }
+.competetive-rank {
+  width:168px;
+  height:176px;
+  background-position: 0 0;
+  background-image: url('/assets/images/overwatch/Ranking_system.png');
+  &.silver {
+    background-position: -168px 0;
+  }
+  &.gold {
+    background-position: -336px 0;
+  }
+  &.platinum {
+    background-position: -504px 0;
+  }
+  &.diamond {
+    background-position: 0 -168px;
+  }
+  &.master {
+    background-position: -168px -168px;
+  }
+  &.grand-master {
+    background-position: -336px -168px;
+  }
+}
