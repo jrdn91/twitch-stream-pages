@@ -1,18 +1,18 @@
 <form>
   <div class="form-group">
     <label for="starting-sr">Starting SR</label>
-    {{input type="text" class="form-control" id="starting-sr" value=model.startingSR}}
+    {{input type="text" class="form-control" id="starting-sr" value=model.startingSR key-up="keyUp"}}
   </div>
   <div class="form-group">
     <label for="current-sr">Current SR</label>
-    {{input type="text" class="form-control" id="current-sr" value=model.currentSR}}
+    {{input type="text" class="form-control" id="current-sr" value=model.currentSR key-up="keyUp"}}
   </div>
   <div class="form-group">
     <label for="games-won">Games Won</label>
-    {{input type="text" class="form-control" id="games-won" value=model.gamesWon}}
+    {{input type="text" class="form-control" id="games-won" value=model.gamesWon key-up="keyUp"}}
   </div>
   <div class="form-group">
     <label for="games-lost">Games Lost</label>
-    {{input type="text" class="form-control" id="games-lost" value=model.gamesLost}}
+    {{input type="text" class="form-control" id="games-lost" value=model.gamesLost key-up="keyUp"}}
   </div>
 </form>
