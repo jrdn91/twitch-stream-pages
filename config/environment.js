@@ -28,7 +28,10 @@ module.exports = function(environment) {
       databaseURL: 'https://stream-pages.firebaseio.com',
       storageBucket: 'stream-pages.appspot.com',
     },
-    fireBaseAppName: 'stream-pages'
+    fireBaseAppName: 'stream-pages',
+    torii: {
+      sessionServiceName: 'session'
+    }
   };
 
   if (environment === 'development') {
