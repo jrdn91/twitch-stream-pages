@@ -16,9 +16,11 @@
       <ul class="nav navbar-nav navbar-left">
         <li>{{link-to "Overwatch" "overwatch"}}</li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="" {{action "signOut"}}>Logout</a></li>
-      </ul>
+      {{#if session.isAuthenticated}}
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" {{action "signOut"}}>Logout</a></li>
+        </ul>
+      {{/if}}
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
