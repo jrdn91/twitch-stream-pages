@@ -7,6 +7,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   },
   saveRecord: function(){
     this.controller.get('model').save();
+    this.controller.set('startingSRObserverFired',0);
   },
   actions: {
     keyUp(){
