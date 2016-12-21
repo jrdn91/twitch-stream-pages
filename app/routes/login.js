@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  location: Ember.inject.service(),
   model(){
     return {
       email:'',
@@ -16,7 +17,13 @@ export default Ember.Route.extend({
         email: this.controller.get('model.email'),
         password: this.controller.get('model.password')
       }).then(function(data) {
-        self.transitionTo('index');
+        var attemptedTransition = self.get('location.attemptedTransition');
+        if(attemptedTransition){
+          self.set('location.attemptedTransition',null);
+          self.transitionTo(attemptedTransition);
+        }else{
+          self.transitionTo('index');
+        }
       }).catch((reason)=>{
         console.log(reason);
         if(reason.code === "auth/user-not-found"){
