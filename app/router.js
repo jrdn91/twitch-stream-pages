@@ -12,6 +12,10 @@ Router.map(function() {
       this.route('input');
       this.route('output');
     });
+    this.route('placements', function() {
+      this.route('input');
+      this.route('output');
+    });
   });
   this.route('login');
 });
