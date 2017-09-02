@@ -1,16 +1,11 @@
-<div class="competetive-stats-panel">
-  <div class="content">
-    <h2 class="heading">Starting SR</h2>
-    <h3 class="text">{{model.startingSR}}</h3>
-    <h2 class="heading">Current SR</h2>
-    <h3 class="text">{{model.currentSR}}</h3>
-    <h2 class="heading">Games Won</h2>
-    <h3 class="text">{{model.gamesWon}}</h3>
-    <h2 class="heading">Games Lost</h2>
-    <h3 class="text">{{model.gamesLost}}</h3>
-  </div>
-  <img src="/assets/images/overwatch/panel-4.png" alt="">
-</div>
-<div class="{{concat "competetive-rank " model.rankClass}}">
-
-</div>
+<section class="placements-timeline">
+  <aside class="line">
+    {{#each points as |result|}}
+      {{#if result.id}}
+        <div class="point {{if result.win 'win' 'loss'}}"></div>
+      {{else}}
+        <div class="point"></div>
+      {{/if}}
+    {{/each}}
+  </aside>
+</section>

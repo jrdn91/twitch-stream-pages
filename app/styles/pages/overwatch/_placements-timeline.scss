@@ -18,3 +18,30 @@
     }
   }
 }
+
+.placements-timeline {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &:after, &:before {
+    content: '';
+    background-color: #e4e4e4;
+    width: 6px;
+    height: 30px;
+  }
+  .line {
+    width: 100%;
+    height: 6px;
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .point {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #e4e4e4;
+      border: 6px solid white;
+    }
+  }
+}
