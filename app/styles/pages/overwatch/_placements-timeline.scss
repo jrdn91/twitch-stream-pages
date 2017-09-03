@@ -1,47 +1,95 @@
-.placements {
-  display: flex;
-  flex-wrap: wrap;
-  .result {
-    height: 50px;
-    width: 50px;
-    background-color: $gray;
-    border-radius: 50%;
-    border: 4px solid $gray-dark;
-    margin-right: 20px;
-    &.win {
-      background-color: $brand-success;
-      border-color: darken($brand-success,10%);
-    }
-    &.loss {
-      background-color: $brand-danger;
-      border-color: darken($brand-danger,10%);
-    }
+body.overwatch-placements-input{
+  .ember-view {
+    height: 100vh;
   }
-}
-
-.placements-timeline {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  &:after, &:before {
-    content: '';
-    background-color: #e4e4e4;
-    width: 6px;
-    height: 30px;
-  }
-  .line {
-    width: 100%;
-    height: 6px;
-    background-color: #e4e4e4;
+  .buttons {
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    .placements {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      .result {
+        width: 50%;
+        background-color: $gray;
+        border: 2px solid $gray-dark;
+        cursor: pointer;
+        &:first-of-type {
+          border-top-width: 4px;
+        }
+        &:nth-of-type(2) {
+          border-top-width: 4px;
+        }
+        &:nth-of-type(even){
+          border-right-width: 4px;
+        }
+        &:nth-of-type(odd){
+          border-left-width: 4px;
+        }
+        &:nth-of-type(9) {
+          border-bottom-width: 4px;
+        }
+        &:last-of-type {
+          border-bottom-width: 4px;
+        }
+        &.win {
+          background-color: $brand-success;
+          border-color: darken($brand-success,10%);
+        }
+        &.loss {
+          background-color: $brand-danger;
+          border-color: darken($brand-danger,10%);
+        }
+      }
+    }
+    .reset-wrapper {
+      height: 44px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      .reset-button {
+        cursor: pointer;
+        height: 100%;
+        text-align: center;
+        line-height: 44px;
+      }
+    }
+  }
+
+  .placements-timeline {
+    height: 100px;
+    display: flex;
     align-items: center;
-    .point {
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
+    &:after, &:before {
+      content: '';
       background-color: #e4e4e4;
-      border: 6px solid white;
+      width: 6px;
+      height: 30px;
+    }
+    .line {
+      width: 100%;
+      height: 6px;
+      background-color: #e4e4e4;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .point {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #e4e4e4;
+        border: 6px solid white;
+        &.win {
+          background-color: $brand-success;
+          width: 60px;
+          height: 60px;
+        }
+        &.loss {
+          background-color: $brand-danger;
+          width: 60px;
+          height: 60px;
+        }
+      }
     }
   }
 }

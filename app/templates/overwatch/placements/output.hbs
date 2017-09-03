@@ -1,11 +1,7 @@
 <section class="placements-timeline">
   <aside class="line">
-    {{#each points as |result|}}
-      {{#if result.id}}
-        <div class="point {{if result.win 'win' 'loss'}}"></div>
-      {{else}}
-        <div class="point"></div>
-      {{/if}}
+    {{#each sortedPoints as |result|}}
+      <div class="point {{result.winStateClass}}"></div>
     {{/each}}
   </aside>
 </section>
