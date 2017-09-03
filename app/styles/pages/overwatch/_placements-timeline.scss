@@ -15,6 +15,12 @@ body.overwatch-placements-input{
         background-color: $gray;
         border: 2px solid $gray-dark;
         cursor: pointer;
+        font-family: "BigNoodle";
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
         &:first-of-type {
           border-top-width: 4px;
         }
@@ -44,14 +50,17 @@ body.overwatch-placements-input{
       }
     }
     .reset-wrapper {
-      height: 44px;
+      height: 64px;
       flex-grow: 0;
       flex-shrink: 0;
       .reset-button {
-        cursor: pointer;
         height: 100%;
-        text-align: center;
-        line-height: 44px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "BigNoodle";
+        font-size: 24px;
       }
     }
   }
