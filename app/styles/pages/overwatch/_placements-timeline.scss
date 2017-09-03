@@ -1,4 +1,4 @@
-body.overwatch-placements-input{
+body.overwatch-placements-input {
   > .ember-view {
     height: 100vh;
   }
@@ -64,14 +64,6 @@ body.overwatch-placements-input{
             transition: transform .5s ease;
             position: relative;
             z-index: 2;
-            .clicker {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              z-index: 1;
-            }
             &.win {
               background-color: $brand-success;
               color: darken($brand-success,10%);
@@ -82,6 +74,14 @@ body.overwatch-placements-input{
               color: darken($brand-danger,10%);
               transform: translateX(100%);
             }
+          }
+          .clicker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
           }
         }
 
@@ -108,7 +108,11 @@ body.overwatch-placements-input{
       }
     }
   }
-
+}
+body.overwatch-placements-output {
+  > .ember-view {
+    height: 100vh;
+  }
   .placements-timeline {
     height: 100px;
     display: flex;
