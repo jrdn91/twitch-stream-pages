@@ -19,22 +19,11 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
       // make 10 empty objects
       this.reset();
     },
-    win(){
-      let result = this.store.createRecord('overwatch/placements/result');
-      result.set('win_state',true);
-      result.save().then(()=>{
+    saveState(data){
+      data.result.set('win_state',data.state);
+      data.result.save().then(()=>{
         this.toast.success('Result Saved');
       });
-    },
-    loss(){
-      let result = this.store.createRecord('overwatch/placements/result');
-      result.set('win_state',false);
-      result.save().then(()=>{
-        this.toast.success('Result Saved');
-      });
-    },
-    remove(result){
-      result.destroyRecord();
     }
   }
 });

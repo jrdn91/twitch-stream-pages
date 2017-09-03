@@ -1,9 +1,10 @@
-<aside class="confirm-container {{if showButtons "show-buttons" ""}}" {{action "clickAction"}}>
-  <div class="confirm win">
+<aside class="confirm-container {{if showButtons "show-buttons" ""}}">
+  <div class="confirm win" {{action "selectWinState" 1}}>
     Win
   </div>
-  <div class="confirm loss">
+  <div class="confirm loss" {{action "selectWinState" 2}}>
     Loss
   </div>
+  <div class="clicker" {{action "clickAction"}}></div>
 </aside>
 {{yield}}

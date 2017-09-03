@@ -1,7 +1,7 @@
 <div class="buttons">
   <section class="placements">
     {{#each model as |result i|}}
-      {{#overwatch/placements/result-button result=result}}
+      {{#overwatch/placements/result-button result=result winStateSelected="saveState"}}
         {{i}}
       {{/overwatch/placements/result-button}}
     {{/each}}
