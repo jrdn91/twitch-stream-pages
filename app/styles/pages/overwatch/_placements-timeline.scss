@@ -1,5 +1,5 @@
 body.overwatch-placements-input{
-  .ember-view {
+  > .ember-view {
     height: 100vh;
   }
   .buttons {
@@ -10,7 +10,7 @@ body.overwatch-placements-input{
       flex-grow: 1;
       display: flex;
       flex-wrap: wrap;
-      .result {
+      .result-button {
         width: 50%;
         background-color: $gray;
         border: 2px solid $gray-dark;

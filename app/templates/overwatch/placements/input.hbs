@@ -1,7 +1,7 @@
 <div class="buttons">
   <section class="placements">
     {{#each model as |result|}}
-      <aside class="result {{result.winStateClass}}" {{action "remove" result}}></aside>
+      {{overwatch/placements/result-button result=result}}
     {{/each}}
   </section>
   <section class="reset-wrapper">
