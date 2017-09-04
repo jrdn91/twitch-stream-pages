@@ -21,9 +21,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
     },
     saveState(data){
       data.result.set('win_state',data.state);
-      data.result.save().then(()=>{
-        this.toast.success('Result Saved');
-      });
+      data.result.save();
     }
   }
 });
