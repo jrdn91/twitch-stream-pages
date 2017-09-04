@@ -1,5 +1,27 @@
 $placement-green: #ade442;
 $placement-red: #ab3041;
+@keyframes greenShadow {
+  0% {
+    box-shadow: 0px 0px 8px 4px lighten($placement-green,10%);
+  }
+  50% {
+    box-shadow: 0px 0px 20px 10px $placement-green;
+  }
+  100% {
+    box-shadow: 0px 0px 8px 4px lighten($placement-green,10%);
+  }
+}
+@keyframes redShadow {
+  0% {
+    box-shadow: 0px 0px 8px 4px lighten($placement-red,10%);
+  }
+  50% {
+    box-shadow: 0px 0px 20px 10px $placement-red;
+  }
+  100% {
+    box-shadow: 0px 0px 8px 4px lighten($placement-red,10%);
+  }
+}
 body.overwatch-placements-input {
   > .ember-view {
     height: 100vh;
@@ -153,6 +175,9 @@ body.overwatch-placements-output {
             background-color: $placement-green;
             width: 50px;
             height: 50px;
+            animation-name: greenShadow;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
           }
         }
         &.loss {
@@ -160,6 +185,9 @@ body.overwatch-placements-output {
             background-color: $placement-red;
             width: 50px;
             height: 50px;
+            animation-name: redShadow;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
           }
         }
       }
