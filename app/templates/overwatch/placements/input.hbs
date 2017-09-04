@@ -2,7 +2,7 @@
   <section class="placements">
     {{#each model as |result i|}}
       {{#overwatch/placements/result-button result=result winStateSelected="saveState"}}
-        {{i}}
+        {{add i 1}}
       {{/overwatch/placements/result-button}}
     {{/each}}
   </section>
