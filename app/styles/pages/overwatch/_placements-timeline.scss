@@ -1,3 +1,5 @@
+$placement-green: #ade442;
+$placement-red: #ab3041;
 body.overwatch-placements-input {
   > .ember-view {
     height: 100vh;
@@ -65,13 +67,13 @@ body.overwatch-placements-input {
             position: relative;
             z-index: 2;
             &.win {
-              background-color: $brand-success;
-              color: darken($brand-success,10%);
+              background-color: $placement-green;
+              color: darken($placement-green,10%);
               transform: translateX(-100%);
             }
             &.loss {
-              background-color: $brand-danger;
-              color: darken($brand-danger,10%);
+              background-color: $placement-red;
+              color: darken($placement-red,10%);
               transform: translateX(100%);
             }
           }
@@ -86,10 +88,10 @@ body.overwatch-placements-input {
         }
 
         &.win {
-          background-color: $brand-success;
+          background-color: $placement-green;
         }
         &.loss {
-          background-color: $brand-danger;
+          background-color: $placement-red;
         }
       }
     }
@@ -131,20 +133,34 @@ body.overwatch-placements-output {
       justify-content: space-around;
       align-items: center;
       .point {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        background-color: #e4e4e4;
-        border: 6px solid white;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+          content: '';
+          border-radius: 50%;
+          background-color: #e4e4e4;
+          border: 6px solid white;
+          transition: height .15s ease, width .15s ease, color .2s linear;
+          height: 30px;
+          width: 30px;
+          display: block;
+        }
         &.win {
-          background-color: $brand-success;
-          width: 60px;
-          height: 60px;
+          &:before {
+            background-color: $placement-green;
+            width: 50px;
+            height: 50px;
+          }
         }
         &.loss {
-          background-color: $brand-danger;
-          width: 60px;
-          height: 60px;
+          &:before {
+            background-color: $placement-red;
+            width: 50px;
+            height: 50px;
+          }
         }
       }
     }
