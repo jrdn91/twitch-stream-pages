@@ -10,6 +10,14 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
     this.controller.set('startingSRObserverFired',0);
   },
   actions: {
+    startingSRFocus(){
+      const input = document.getElementById("starting-sr");
+      input.setSelectionRange(0, input.value.length);
+    },
+    currentSRFocus(){
+      const input = document.getElementById("current-sr");
+      input.setSelectionRange(0, input.value.length);
+    },
     keyUp(){
       Ember.run.debounce(this, this.saveRecord, 1000);
     },
