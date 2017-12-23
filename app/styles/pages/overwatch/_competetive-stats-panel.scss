@@ -30,6 +30,96 @@
     }
   }
 }
+.competetive-input {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .input-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    form {
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      .row {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        .form-group {
+          flex-grow: 2;
+          display: flex;
+          flex-direction: column;
+          label {
+            flex-grow: 1;
+            padding-top: 12px;
+          }
+          input {
+            flex-grow: 3;
+            font-size: 2em;
+          }
+        }
+        .win-loss-container {
+          flex-grow: 1;
+          display: flex;
+          border-top: 1px solid $brand-primary;
+          .count {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "BigNoodle";
+            font-size: 24px;
+            &.win {
+              color: $placement-green;
+            }
+            &.loss {
+              color: $placement-red;
+            }
+          }
+        }
+        .button-wrapper {
+          flex-grow: 2;
+          display: flex;
+          flex-direction: column;
+          button {
+            color: white;
+            height: 100%;
+            cursor: pointer;
+            font-family: "BigNoodle";
+            font-size: 24px;
+            flex-grow: 1;
+            border: none;
+            &.loss {
+              background-color: $placement-red;
+            }
+            &.win {
+              background-color: $placement-green;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reset-wrapper {
+    height: 64px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: $brand-primary;
+    .reset-button {
+      color: white;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "BigNoodle";
+      font-size: 24px;
+    }
+  }
+}
 .competetive-rank {
   width:168px;
   height:176px;

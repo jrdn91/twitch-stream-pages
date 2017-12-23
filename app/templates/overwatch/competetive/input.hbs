@@ -1,20 +1,41 @@
-<form class="container">
-  <div class="row">
-    <div class="form-group col-sm-6 col-sm-offset-3">
-      <label for="starting-sr">Starting SR</label>
-      {{input type="number" class="form-control" id="starting-sr" value=model.startingSR key-up="keyUp"}}
-    </div>
-    <div class="form-group col-sm-6 col-sm-offset-3">
-      <label for="current-sr">Current SR</label>
-      {{input type="number" class="form-control" id="current-sr" value=model.currentSR key-up="keyUp"}}
-    </div>
-    <div class="form-group col-sm-6 col-sm-offset-3">
-      <label for="games-won">Games Won</label>
-      {{input type="number" class="form-control" id="games-won" value=model.gamesWon key-up="keyUp"}}
-    </div>
-    <div class="form-group col-sm-6 col-sm-offset-3">
-      <label for="games-lost">Games Lost</label>
-      {{input type="number" class="form-control" id="games-lost" value=model.gamesLost key-up="keyUp"}}
-    </div>
-  </div>
-</form>
+<div class="competetive-input">
+  <section class="input-wrapper">
+    <form class="container">
+      <div class="row">
+        <div class="form-group col-sm-6 col-sm-offset-3">
+          <label for="starting-sr">Starting SR</label>
+          {{input type="number" class="form-control" id="starting-sr" value=model.startingSR key-up="keyUp"}}
+        </div>
+        <div class="form-group col-sm-6 col-sm-offset-3">
+          <label for="current-sr">Current SR</label>
+          {{input type="number" class="form-control" id="current-sr" value=model.currentSR key-up="keyUp"}}
+        </div>
+        <div class="win-loss-container">
+          <div class="count win">
+            {{model.gamesWon}}
+          </div>
+          <div class="count loss">
+            {{model.gamesLost}}
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="win-lost-button loss" {{action "gameLoss"}}>Loss</button>
+        </div>
+        <div class="button-wrapper">
+          <button class="win-lost-button win" {{action "gameWin"}}>Win</button>
+        </div>
+        {{!-- <div class="form-group col-sm-6 col-sm-offset-3">
+          <label for="games-won">Games Won</label>
+          {{input type="number" class="form-control" id="games-won" value=model.gamesWon key-up="keyUp"}}
+        </div>
+        <div class="form-group col-sm-6 col-sm-offset-3">
+          <label for="games-lost">Games Lost</label>
+          {{input type="number" class="form-control" id="games-lost" value=model.gamesLost key-up="keyUp"}}
+        </div> --}}
+      </div>
+    </form>
+  </section>
+  <section class="reset-wrapper">
+    <div class="reset-button" {{action "reset"}}>Reset</div>
+  </section>
+</div>
