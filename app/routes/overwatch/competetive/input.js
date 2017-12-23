@@ -11,12 +11,12 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   },
   actions: {
     startingSRFocus(){
-      const input = Ember.$('#starting-sr');
-      input.select();
+      const input = document.getElementById("starting-sr");
+      input.setSelectionRange(0, input.value.length);
     },
     currentSRFocus(){
-      const input = Ember.$('#current-sr');
-      input.select();
+      const input = document.getElementById("current-sr");
+      input.setSelectionRange(0, input.value.length);
     },
     keyUp(){
       Ember.run.debounce(this, this.saveRecord, 1000);
