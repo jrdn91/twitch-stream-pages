@@ -47,6 +47,11 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
+        .inputs {
+          flex-grow: 2;
+          display: flex;
+          flex-direction: column;
+        }
         .form-group {
           flex-grow: 2;
           display: flex;
@@ -79,6 +84,11 @@
               color: $placement-red;
             }
           }
+        }
+        .buttons {
+          flex-grow: 2;
+          display: flex;
+          flex-direction: column;
         }
         .button-wrapper {
           flex-grow: 2;

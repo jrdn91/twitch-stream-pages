@@ -2,13 +2,15 @@
   <section class="input-wrapper">
     <form class="container">
       <div class="row">
-        <div class="form-group col-sm-6 col-sm-offset-3">
-          <label for="starting-sr">Starting SR</label>
-          {{input type="tel" class="form-control" id="starting-sr" value=model.startingSR key-up="keyUp" focus-in="startingSRFocus"}}
-        </div>
-        <div class="form-group col-sm-6 col-sm-offset-3">
-          <label for="current-sr">Current SR</label>
-          {{input type="tel" class="form-control" id="current-sr" value=model.currentSR key-up="keyUp" focus-in="currentSRFocus"}}
+        <div class="inputs">
+          <div class="form-group col-sm-6 col-sm-offset-3">
+            <label for="starting-sr">Starting SR</label>
+            {{input type="tel" class="form-control" id="starting-sr" value=model.startingSR key-up="keyUp" focus-in="startingSRFocus"}}
+          </div>
+          <div class="form-group col-sm-6 col-sm-offset-3">
+            <label for="current-sr">Current SR</label>
+            {{input type="tel" class="form-control" id="current-sr" value=model.currentSR key-up="keyUp" focus-in="currentSRFocus"}}
+          </div>
         </div>
         <div class="win-loss-container">
           <div class="count win">
@@ -18,11 +20,13 @@
             {{model.gamesLost}}
           </div>
         </div>
-        <div class="button-wrapper">
-          <button class="win-lost-button loss" {{action "gameLoss"}}>Loss</button>
-        </div>
-        <div class="button-wrapper">
-          <button class="win-lost-button win" {{action "gameWin"}}>Win</button>
+        <div class="buttons">
+          <div class="button-wrapper">
+            <button class="win-lost-button loss" {{action "gameLoss"}}>Loss</button>
+          </div>
+          <div class="button-wrapper">
+            <button class="win-lost-button win" {{action "gameWin"}}>Win</button>
+          </div>
         </div>
       </div>
     </form>
