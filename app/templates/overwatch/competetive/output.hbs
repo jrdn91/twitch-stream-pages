@@ -16,6 +16,22 @@
 {{#if (eq element "icon")}}
   <div class="{{concat "competetive-rank " model.rankClass}}" />
 {{/if}}
+{{#if (eq element "display")}}
+  <div class="display">
+    <div class="current-sr">
+      <h2 class="heading">Current SR</h2>
+      <h3 class="text">{{model.currentSR}}</h3>
+    </div>
+    <div class="sr-spread">
+      <h2 class="heading">Spread</h2>
+      <h3 class={{concat 'text' (if (gt model.srSpread 0) ' positive' ' negative')}}>{{model.srSpread}}</h3>
+    </div>
+    <div class="win-loss">
+      <h2 class="heading">Wins / Losses</h2>
+      <h3 class="text"><span class="games-won">{{model.gamesWon}}</span> / <span class="games-lost">{{model.gamesLost}}</span></h3>
+    </div>
+  </div>
+{{/if}}
 {{#unless element}}
   Please enter an ?element= query param
 {{/unless}}

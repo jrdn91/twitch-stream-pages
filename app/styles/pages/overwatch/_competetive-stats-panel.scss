@@ -165,3 +165,21 @@
     background-position: -336px -168px;
   }
 }
+.display {
+  display: flex;
+  justify-content: space-between;
+  .text {
+    &.positive {
+      color: $brand-success;
+    }
+    &.negative {
+      color: $brand-danger;
+    }
+  }
+  .games-won {
+    color: $brand-success;
+  }
+  .games-lost {
+    color: $brand-danger;
+  }
+}

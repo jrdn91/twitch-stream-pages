@@ -6,6 +6,10 @@ export default DS.Model.extend({
   currentSR: DS.attr('number'),
   gamesWon: DS.attr('number'),
   gamesLost: DS.attr('number'),
+  srSpread: Ember.computed('startingSR', 'currentSR', function() {
+    const diff = this.get('currentSR') - this.get('startingSR');
+    return diff > 0 ? `+${diff}` : `-${diff}`;
+  }),
 
   rankClass: Ember.computed('currentSR',function(){
     var sr = this.get('currentSR');
