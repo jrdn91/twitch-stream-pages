@@ -8,7 +8,7 @@ export default DS.Model.extend({
   gamesLost: DS.attr('number'),
   srSpread: Ember.computed('startingSR', 'currentSR', function() {
     const diff = this.get('currentSR') - this.get('startingSR');
-    return diff > 0 ? `+${diff}` : `-${diff}`;
+    return diff > 0 ? `+${diff}` : `${diff}`;
   }),
 
   rankClass: Ember.computed('currentSR',function(){
